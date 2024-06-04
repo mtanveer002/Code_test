@@ -1,45 +1,65 @@
-Do at least ONE of the following tasks: refactor is mandatory. Write tests is optional, will be good bonus to see it. 
-Please do not invest more than 2-4 hours on this.
-Upload your results to a Github repo, for easier sharing and reviewing.
+## My Comments on Given Code:
+The code looks good and I enjoyed reading it, especially the use of repository pattern. I have less seen of it projects. but I believe it should be used more often. Need to cleaner and ehance
+readablity
 
-Thank you and good luck!
+### Refactoring
+Although I skimmed through the code and added refactoring as much as possible I may have missed some points. In any case following are my thoughts on refactoring in the given code.
 
+* I have use camelCase for variable name it is recommend in php latest version
+* Remove extra and un-used code
+* Create some private function that is ehance code cleanes.
+* Align public function and private function. 
+* Ensure functions return consistent formats for better maintainability.
+* Fix logical errors in functions, handle failures properly.
+* Validate and sanitize inputs to maintain data integrity.
+* Stick to consistent PHP variable naming conventions.
+* Prefer Eloquent or query builder over DB::table for queries.
+* Use function-based helpers instead of class-based static helpers.
+* Explicitly declare access types for functions.
+* Choose one array syntax (array() or []) and be consistent.
+* Always use curly braces with conditional statements to avoid ambiguity.
 
+#Overall Impression
 
-Code to refactor
-=================
-1) app/Http/Controllers/BookingController.php
-2) app/Repository/BookingRepository.php
+The code exhibits a well-structured design, particularly with the implementation of the repository pattern, which is a commendable practice.
+The readability is above average, but there's room for further improvement.
+Refactoring Suggestions
 
-Code to write tests (optional)
-=====================
-3) App/Helpers/TeHelper.php method willExpireAt
-4) App/Repository/UserRepository.php, method createOrUpdate
+While i've already addressed some aspects, here are additional recommendations:
 
+Variable Naming:
+    Adhere to consistent naming conventions, preferably camelCase as recommended in the latest PHP versions.
+    Use descriptive and meaningful names that convey the purpose of variables.
 
-----------------------------
+Code Optimization:
+    Eliminate any redundant or unused code segments.
+    Encapsulate repetitive logic within private functions to enhance code cleanliness and maintainability.
 
-What I expect in your repo:
+Function Structure:
+    Group related functions together for better organization.
+    Ensure consistent indentation and spacing for improved readability.
+    Declare access types (public, private) explicitly for clarity.
 
-X. A readme with:   Your thoughts about the code. What makes it amazing code. Or what makes it ok code. Or what makes it terrible code. How would you have done it. Thoughts on formatting, structure, logic.. The more details that you can provide about the code (what's terrible about it or/and what is good about it) the easier for us to assess your coding style, mentality etc
+Output Consistency:
+    Establish a uniform format for function return values to streamline maintainability.
+    Handle errors gracefully, providing informative messages for debugging.
 
-And 
+Input Validation and Sanitization:
+    Implement robust input validation to safeguard against invalid or malicious data.
+    Sanitize user input to prevent potential security vulnerabilities.
 
-Y.  Refactor it if you feel it needs refactoring. The more love you put into it. The easier for us to asses your thoughts, code principles etc
+Database Interactions:
+    If applicable, consider leveraging Eloquent or the query builder for database interactions as they offer a more expressive 
+    and maintainable approach compared to DB::table.
 
+Helper Functions:
+    Favor function-based helpers over class-based static helpers for cleaner code structure.
 
-IMPORTANT: Make two commits. First commit with original code. Second with your refactor so we can easily trace changes. 
+Code Style:
+    Maintain a consistent syntax for array declarations (either array() or []).
+    Always enclose conditional statements (if/else) within curly braces to avoid unintended behavior.
 
-
-NB: you do not need to set up the code on local and make the web app run. It will not run as its not a complete web app. This is purely to assess you thoughts about code, formatting, logic etc
-
-
-===== So expected output is a GitHub link with either =====
-
-1. Readme described above (point X above) + refactored code 
-OR
-2. Readme described above (point X above) + refactored core + a unit test of the code that we have sent
-
-Thank you!
-
-
+Additional:
+    Break down complex functions into smaller, more manageable units.
+    Utilize meaningful comments to explain non-obvious code sections.
+    Write unit tests to verify code functionality and catch regressions during refactoring.
